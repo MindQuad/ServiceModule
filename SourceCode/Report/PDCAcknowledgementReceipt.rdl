@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Addr_2_">
+          <DataField>Addr_2_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="Addr_1_">
+          <DataField>Addr_1_</DataField>
+        </Field>
+        <Field Name="Addr_3_">
+          <DataField>Addr_3_</DataField>
+        </Field>
+        <Field Name="Addr_4_">
+          <DataField>Addr_4_</DataField>
+        </Field>
+        <Field Name="Addr_5_">
+          <DataField>Addr_5_</DataField>
+        </Field>
+        <Field Name="Addr_6_">
+          <DataField>Addr_6_</DataField>
+        </Field>
+        <Field Name="Addr_7_">
+          <DataField>Addr_7_</DataField>
+        </Field>
+        <Field Name="Addr_8_">
+          <DataField>Addr_8_</DataField>
+        </Field>
+        <Field Name="Title">
+          <DataField>Title</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Check_Date_">
+          <DataField>Post_Dated_Check_Line_2__Check_Date_</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Check_No__">
+          <DataField>Post_Dated_Check_Line_2__Check_No__</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Amount">
+          <DataField>Post_Dated_Check_Line_2_Amount</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_AmountFormat">
+          <DataField>Post_Dated_Check_Line_2_AmountFormat</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Applies_to_Doc__Type_">
+          <DataField>Post_Dated_Check_Line_2__Applies_to_Doc__Type_</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Applies_to_Doc__No__">
+          <DataField>Post_Dated_Check_Line_2__Applies_to_Doc__No__</DataField>
+        </Field>
+        <Field Name="CurrencyCode">
+          <DataField>CurrencyCode</DataField>
+        </Field>
+        <Field Name="RecordNum">
+          <DataField>RecordNum</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Comment">
+          <DataField>Post_Dated_Check_Line_2_Comment</DataField>
+        </Field>
+        <Field Name="CheckCount">
+          <DataField>CheckCount</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Template_Name">
+          <DataField>Post_Dated_Check_Line_2_Template_Name</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Batch_Name">
+          <DataField>Post_Dated_Check_Line_2_Batch_Name</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Account_Type">
+          <DataField>Post_Dated_Check_Line_2_Account_Type</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Account_No_">
+          <DataField>Post_Dated_Check_Line_2_Account_No_</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_Line_Number">
+          <DataField>Post_Dated_Check_Line_2_Line_Number</DataField>
+        </Field>
+        <Field Name="Post_Dated_Checks_Acknowledgement_ReceiptCaption">
+          <DataField>Post_Dated_Checks_Acknowledgement_ReceiptCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2_AmountCaption">
+          <DataField>Post_Dated_Check_Line_2_AmountCaption</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Check_Date_Caption">
+          <DataField>Post_Dated_Check_Line_2__Check_Date_Caption</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Check_No__Caption">
+          <DataField>Post_Dated_Check_Line_2__Check_No__Caption</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Applies_to_Doc__Type_Caption">
+          <DataField>Post_Dated_Check_Line_2__Applies_to_Doc__Type_Caption</DataField>
+        </Field>
+        <Field Name="Post_Dated_Check_Line_2__Applies_to_Doc__No__Caption">
+          <DataField>Post_Dated_Check_Line_2__Applies_to_Doc__No__Caption</DataField>
+        </Field>
+        <Field Name="Comments_Caption">
+          <DataField>Comments_Caption</DataField>
+        </Field>
+        <Field Name="Signature_over_the_Printed_NameCaption">
+          <DataField>Signature_over_the_Printed_NameCaption</DataField>
+        </Field>
+        <Field Name="Total_No__of_Checks_Caption">
+          <DataField>Total_No__of_Checks_Caption</DataField>
+        </Field>
+        <Field Name="Received_By_Caption">
+          <DataField>Received_By_Caption</DataField>
+        </Field>
+        <Field Name="Status_PDCL">
+          <DataField>Status_PDCL</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

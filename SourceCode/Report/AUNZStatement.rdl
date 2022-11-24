@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Customer_No_">
+          <DataField>Customer_No_</DataField>
+        </Field>
+        <Field Name="Customer_Global_Dimension_1_Filter">
+          <DataField>Customer_Global_Dimension_1_Filter</DataField>
+        </Field>
+        <Field Name="Customer_Global_Dimension_2_Filter">
+          <DataField>Customer_Global_Dimension_2_Filter</DataField>
+        </Field>
+        <Field Name="CustomerAddress_1_">
+          <DataField>CustomerAddress_1_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_2_">
+          <DataField>CustomerAddress_2_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_3_">
+          <DataField>CustomerAddress_3_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_4_">
+          <DataField>CustomerAddress_4_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_5_">
+          <DataField>CustomerAddress_5_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_6_">
+          <DataField>CustomerAddress_6_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_7_">
+          <DataField>CustomerAddress_7_</DataField>
+        </Field>
+        <Field Name="CustomerAddress_8_">
+          <DataField>CustomerAddress_8_</DataField>
+        </Field>
+        <Field Name="FORMAT_ToDate_">
+          <DataField>FORMAT_ToDate_</DataField>
+        </Field>
+        <Field Name="Customer__No__">
+          <DataField>Customer__No__</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="CurrencyLabel">
+          <DataField>CurrencyLabel</DataField>
+        </Field>
+        <Field Name="CompanyAddress_4_">
+          <DataField>CompanyAddress_4_</DataField>
+        </Field>
+        <Field Name="CompanyAddress_3_">
+          <DataField>CompanyAddress_3_</DataField>
+        </Field>
+        <Field Name="CompanyAddress_2_">
+          <DataField>CompanyAddress_2_</DataField>
+        </Field>
+        <Field Name="CompanyAddress_1_">
+          <DataField>CompanyAddress_1_</DataField>
+        </Field>
+        <Field Name="CompanyAddress_5_">
+          <DataField>CompanyAddress_5_</DataField>
+        </Field>
+        <Field Name="PhoneNo">
+          <DataField>PhoneNo</DataField>
+        </Field>
+        <Field Name="FaxNo">
+          <DataField>FaxNo</DataField>
+        </Field>
+        <Field Name="VATRegNo">
+          <DataField>VATRegNo</DataField>
+        </Field>
+        <Field Name="GiroNo">
+          <DataField>GiroNo</DataField>
+        </Field>
+        <Field Name="Bank">
+          <DataField>Bank</DataField>
+        </Field>
+        <Field Name="AccountNo">
+          <DataField>AccountNo</DataField>
+        </Field>
+        <Field Name="CompanyInformation__Bank_Account_No__">
+          <DataField>CompanyInformation__Bank_Account_No__</DataField>
+        </Field>
+        <Field Name="CompanyInformation__Bank_Name_">
+          <DataField>CompanyInformation__Bank_Name_</DataField>
+        </Field>
+        <Field Name="CompanyInformation__Giro_No__">
+          <DataField>CompanyInformation__Giro_No__</DataField>
+        </Field>
+        <Field Name="CompanyInformation__VAT_Registration_No__">
+          <DataField>CompanyInformation__VAT_Registration_No__</DataField>
+        </Field>
+        <Field Name="CompanyInformation__Fax_No__">
+          <DataField>CompanyInformation__Fax_No__</DataField>
+        </Field>
+        <Field Name="CompanyInformation__Phone_No__">
+          <DataField>CompanyInformation__Phone_No__</DataField>
+        </Field>
+        <Field Name="PrintLCY">
+          <DataField>PrintLCY</DataField>
+        </Field>
+        <Field Name="StatementStyle">
+          <DataField>StatementStyle</DataField>
+        </Field>
+        <Field Name="AgingMethod">
+          <DataField>AgingMethod</DataField>
+        </Field>
+        <Field Name="DebitBalance">
+          <DataField>DebitBalance</DataField>
+        </Field>
+        <Field Name="DebitBalanceFormat">
+          <DataField>DebitBalanceFormat</DataField>
+        </Field>
+        <Field Name="CreditBalance">
+          <DataField>CreditBalance</DataField>
+        </Field>
+        <Field Name="CreditBalanceFormat">
+          <DataField>CreditBalanceFormat</DataField>
+        </Field>
+        <Field Name="StatementBalance">
+          <DataField>StatementBalance</DataField>
+        </Field>
+        <Field Name="StatementBalanceFormat">
+          <DataField>StatementBalanceFormat</DataField>
+        </Field>
+        <Field Name="HeaderFooter_Number">
+          <DataField>HeaderFooter_Number</DataField>
+        </Field>
+        <Field Name="STATEMENTCaption">
+          <DataField>STATEMENTCaption</DataField>
+        </Field>
+        <Field Name="Statement_Date_Caption">
+          <DataField>Statement_Date_Caption</DataField>
+        </Field>
+        <Field Name="Account_Number_Caption">
+          <DataField>Account_Number_Caption</DataField>
+        </Field>
+        <Field Name="Currency_Caption">
+          <DataField>Currency_Caption</DataField>
+        </Field>
+        <Field Name="Page_Caption">
+          <DataField>Page_Caption</DataField>
+        </Field>
+        <Field Name="BalanceCaption">
+          <DataField>BalanceCaption</DataField>
+        </Field>
+        <Field Name="CreditsCaption">
+          <DataField>CreditsCaption</DataField>
+        </Field>
+        <Field Name="DebitsCaption">
+          <DataField>DebitsCaption</DataField>
+        </Field>
+        <Field Name="Due_DateCaption">
+          <DataField>Due_DateCaption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="DocumentCaption">
+          <DataField>DocumentCaption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="Statement_BalanceCaption">
+          <DataField>Statement_BalanceCaption</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCY">
+          <DataField>BalanceToPrintLCY</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCYFormat">
+          <DataField>BalanceToPrintLCYFormat</DataField>
+        </Field>
+        <Field Name="FORMAT_FromDate___1_">
+          <DataField>FORMAT_FromDate___1_</DataField>
+        </Field>
+        <Field Name="Balance_Forward_Number">
+          <DataField>Balance_Forward_Number</DataField>
+        </Field>
+        <Field Name="Balance_ForwardCaption">
+          <DataField>Balance_ForwardCaption</DataField>
+        </Field>
+        <Field Name="Bal_FwdCaption">
+          <DataField>Bal_FwdCaption</DataField>
+        </Field>
+        <Field Name="BalanceToPrint">
+          <DataField>BalanceToPrint</DataField>
+        </Field>
+        <Field Name="BalanceToPrintFormat">
+          <DataField>BalanceToPrintFormat</DataField>
+        </Field>
+        <Field Name="FORMAT__Due_Date__">
+          <DataField>FORMAT__Due_Date__</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3__Document_No__">
+          <DataField>CustLedgerEntry3__Document_No__</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3__Document_Type_">
+          <DataField>CustLedgerEntry3__Document_Type_</DataField>
+        </Field>
+        <Field Name="FORMAT__Posting_Date__">
+          <DataField>FORMAT__Posting_Date__</DataField>
+        </Field>
+        <Field Name="OpenDrBal">
+          <DataField>OpenDrBal</DataField>
+        </Field>
+        <Field Name="OpenDrBalFormat">
+          <DataField>OpenDrBalFormat</DataField>
+        </Field>
+        <Field Name="OpenCrBal">
+          <DataField>OpenCrBal</DataField>
+        </Field>
+        <Field Name="OpenCrBalFormat">
+          <DataField>OpenCrBalFormat</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCY_Control1500085">
+          <DataField>BalanceToPrintLCY_Control1500085</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCY_Control1500085Format">
+          <DataField>BalanceToPrintLCY_Control1500085Format</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3__Due_Date__Control1500088">
+          <DataField>CustLedgerEntry3__Due_Date__Control1500088</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3__Document_No___Control1500089">
+          <DataField>CustLedgerEntry3__Document_No___Control1500089</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3__Document_Type__Control1500090">
+          <DataField>CustLedgerEntry3__Document_Type__Control1500090</DataField>
+        </Field>
+        <Field Name="FORMAT__Posting_Date___Control1500091">
+          <DataField>FORMAT__Posting_Date___Control1500091</DataField>
+        </Field>
+        <Field Name="OpenDrBalLCY">
+          <DataField>OpenDrBalLCY</DataField>
+        </Field>
+        <Field Name="OpenDrBalLCYFormat">
+          <DataField>OpenDrBalLCYFormat</DataField>
+        </Field>
+        <Field Name="OpenCrBalLCY">
+          <DataField>OpenCrBalLCY</DataField>
+        </Field>
+        <Field Name="OpenCrBalLCYFormat">
+          <DataField>OpenCrBalLCYFormat</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3_Entry_No_">
+          <DataField>CustLedgerEntry3_Entry_No_</DataField>
+        </Field>
+        <Field Name="CustLedgerEntry3_Customer_No_">
+          <DataField>CustLedgerEntry3_Customer_No_</DataField>
+        </Field>
+        <Field Name="BalanceToPrint_Control1500052">
+          <DataField>BalanceToPrint_Control1500052</DataField>
+        </Field>
+        <Field Name="BalanceToPrint_Control1500052Format">
+          <DataField>BalanceToPrint_Control1500052Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Credit_Amount_">
+          <DataField>Cust__Ledg__Entry__Credit_Amount_</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Credit_Amount_Format">
+          <DataField>Cust__Ledg__Entry__Credit_Amount_Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Debit_Amount_">
+          <DataField>Cust__Ledg__Entry__Debit_Amount_</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Debit_Amount_Format">
+          <DataField>Cust__Ledg__Entry__Debit_Amount_Format</DataField>
+        </Field>
+        <Field Name="FORMAT_DueDate_">
+          <DataField>FORMAT_DueDate_</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Document_No__">
+          <DataField>Cust__Ledg__Entry__Document_No__</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Document_Type_">
+          <DataField>Cust__Ledg__Entry__Document_Type_</DataField>
+        </Field>
+        <Field Name="FORMAT__Posting_Date___Control1500058">
+          <DataField>FORMAT__Posting_Date___Control1500058</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCY_Control1500059">
+          <DataField>BalanceToPrintLCY_Control1500059</DataField>
+        </Field>
+        <Field Name="BalanceToPrintLCY_Control1500059Format">
+          <DataField>BalanceToPrintLCY_Control1500059Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Credit_Amount__LCY__">
+          <DataField>Cust__Ledg__Entry__Credit_Amount__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Credit_Amount__LCY__Format">
+          <DataField>Cust__Ledg__Entry__Credit_Amount__LCY__Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Debit_Amount__LCY__">
+          <DataField>Cust__Ledg__Entry__Debit_Amount__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Debit_Amount__LCY__Format">
+          <DataField>Cust__Ledg__Entry__Debit_Amount__LCY__Format</DataField>
+        </Field>
+        <Field Name="FORMAT_DueDate__Control1500062">
+          <DataField>FORMAT_DueDate__Control1500062</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Document_No___Control1500063">
+          <DataField>Cust__Ledg__Entry__Document_No___Control1500063</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry__Document_Type__Control1500064">
+          <DataField>Cust__Ledg__Entry__Document_Type__Control1500064</DataField>
+        </Field>
+        <Field Name="FORMAT__Posting_Date___Control1500065">
+          <DataField>FORMAT__Posting_Date___Control1500065</DataField>
+        </Field>
+        <Field Name="StatementComplete">
+          <DataField>StatementComplete</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry_Entry_No_">
+          <DataField>Cust__Ledg__Entry_Entry_No_</DataField>
+        </Field>
+        <Field Name="Cust__Ledg__Entry_Customer_No_">
+          <DataField>Cust__Ledg__Entry_Customer_No_</DataField>
+        </Field>
+        <Field Name="Just_For_Adding_One_Record_to_Dataset_">
+          <DataField>Just_For_Adding_One_Record_to_Dataset_</DataField>
+        </Field>
+        <Field Name="EndOfCustomer_Number">
+          <DataField>EndOfCustomer_Number</DataField>
+        </Field>
+        <Field Name="Testdec_Control1000000001">
+          <DataField>Testdec_Control1000000001</DataField>
+        </Field>
+        <Field Name="Testdec_Control1000000001Format">
+          <DataField>Testdec_Control1000000001Format</DataField>
+        </Field>
+        <Field Name="AgingAmount_3__Control1000000000">
+          <DataField>AgingAmount_3__Control1000000000</DataField>
+        </Field>
+        <Field Name="AgingAmount_3__Control1000000000Format">
+          <DataField>AgingAmount_3__Control1000000000Format</DataField>
+        </Field>
+        <Field Name="AgingAmount_2__Control1000000002">
+          <DataField>AgingAmount_2__Control1000000002</DataField>
+        </Field>
+        <Field Name="AgingAmount_2__Control1000000002Format">
+          <DataField>AgingAmount_2__Control1000000002Format</DataField>
+        </Field>
+        <Field Name="AgingAmount_1__Control1000000003">
+          <DataField>AgingAmount_1__Control1000000003</DataField>
+        </Field>
+        <Field Name="AgingAmount_1__Control1000000003Format">
+          <DataField>AgingAmount_1__Control1000000003Format</DataField>
+        </Field>
+        <Field Name="StatementBalance_Control1000000004">
+          <DataField>StatementBalance_Control1000000004</DataField>
+        </Field>
+        <Field Name="StatementBalance_Control1000000004Format">
+          <DataField>StatementBalance_Control1000000004Format</DataField>
+        </Field>
+        <Field Name="CreditBalance_Control1000000005">
+          <DataField>CreditBalance_Control1000000005</DataField>
+        </Field>
+        <Field Name="CreditBalance_Control1000000005Format">
+          <DataField>CreditBalance_Control1000000005Format</DataField>
+        </Field>
+        <Field Name="DebitBalance_Control1000000006">
+          <DataField>DebitBalance_Control1000000006</DataField>
+        </Field>
+        <Field Name="DebitBalance_Control1000000006Format">
+          <DataField>DebitBalance_Control1000000006Format</DataField>
+        </Field>
+        <Field Name="AgingDaysText_Control1000000010">
+          <DataField>AgingDaysText_Control1000000010</DataField>
+        </Field>
+        <Field Name="AgingHead_4__Control1000000008">
+          <DataField>AgingHead_4__Control1000000008</DataField>
+        </Field>
+        <Field Name="AgingHead_3__Control1000000011">
+          <DataField>AgingHead_3__Control1000000011</DataField>
+        </Field>
+        <Field Name="AgingHead_2__Control1000000013">
+          <DataField>AgingHead_2__Control1000000013</DataField>
+        </Field>
+        <Field Name="AgingHead_1__Control1000000014">
+          <DataField>AgingHead_1__Control1000000014</DataField>
+        </Field>
+        <Field Name="test2_test2_Number">
+          <DataField>test2_test2_Number</DataField>
+        </Field>
+        <Field Name="StatementComplete_Control1000000016">
+          <DataField>StatementComplete_Control1000000016</DataField>
+        </Field>
+        <Field Name="AgingMethod_Control1000000017">
+          <DataField>AgingMethod_Control1000000017</DataField>
+        </Field>
+        <Field Name="Statement_BalanceCaption_Control1000000007">
+          <DataField>Statement_BalanceCaption_Control1000000007</DataField>
+        </Field>
+        <Field Name="Statement_Aging_Caption_Control1000000009">
+          <DataField>Statement_Aging_Caption_Control1000000009</DataField>
+        </Field>
+        <Field Name="Aged_Amounts_Caption_Control1000000012">
+          <DataField>Aged_Amounts_Caption_Control1000000012</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ShiptoCode_PurchaseHeader">
+          <DataField>ShiptoCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName_PurchaseHeader">
+          <DataField>ShiptoName_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName2_PurchaseHeader">
+          <DataField>ShiptoName2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress_PurchaseHeader">
+          <DataField>ShiptoAddress_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress2_PurchaseHeader">
+          <DataField>ShiptoAddress2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoCity_PurchaseHeader">
+          <DataField>ShiptoCity_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoContact_PurchaseHeader">
+          <DataField>ShiptoContact_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromVendorName_PurchaseHeader">
+          <DataField>BuyfromVendorName_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromVendorName2_PurchaseHeader">
+          <DataField>BuyfromVendorName2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromAddress_PurchaseHeader">
+          <DataField>BuyfromAddress_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromAddress2_PurchaseHeader">
+          <DataField>BuyfromAddress2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromCity_PurchaseHeader">
+          <DataField>BuyfromCity_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromContact_PurchaseHeader">
+          <DataField>BuyfromContact_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromVendorNo_PurchaseHeader">
+          <DataField>BuyfromVendorNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="No_PurchaseHeader">
+          <DataField>No_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PurchaseHeader">
+          <DataField>PostingDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromContactNo_PurchaseHeader">
+          <DataField>BuyfromContactNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromPostCode_PurchaseHeader">
+          <DataField>BuyfromPostCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromCounty_PurchaseHeader">
+          <DataField>BuyfromCounty_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyfromCountryRegionCode_PurchaseHeader">
+          <DataField>BuyfromCountryRegionCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="BuyFromQuoteNo">
+          <DataField>BuyFromQuoteNo</DataField>
+        </Field>
+        <Field Name="BuyFromCurency">
+          <DataField>BuyFromCurency</DataField>
+        </Field>
+        <Field Name="logo">
+          <DataField>logo</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="add">
+          <DataField>add</DataField>
+        </Field>
+        <Field Name="add1">
+          <DataField>add1</DataField>
+        </Field>
+        <Field Name="phoneno">
+          <DataField>phoneno</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="faxno">
+          <DataField>faxno</DataField>
+        </Field>
+        <Field Name="postcode">
+          <DataField>postcode</DataField>
+        </Field>
+        <Field Name="email">
+          <DataField>email</DataField>
+        </Field>
+        <Field Name="VatRegno">
+          <DataField>VatRegno</DataField>
+        </Field>
+        <Field Name="Homepage">
+          <DataField>Homepage</DataField>
+        </Field>
+        <Field Name="country">
+          <DataField>country</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseHeader">
+          <DataField>AmountIncludingVAT_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseHeaderFormat">
+          <DataField>AmountIncludingVAT_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="OrderDate_PurchaseHeader">
+          <DataField>OrderDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_PurchaseHeader">
+          <DataField>VATRegistrationNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaymentDesc">
+          <DataField>PaymentDesc</DataField>
+        </Field>
+        <Field Name="AmountInWords1">
+          <DataField>AmountInWords1</DataField>
+        </Field>
+        <Field Name="AmountInWords2">
+          <DataField>AmountInWords2</DataField>
+        </Field>
+        <Field Name="ExpectedReceiptDate_PurchaseHeader">
+          <DataField>ExpectedReceiptDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="contactphone">
+          <DataField>contactphone</DataField>
+        </Field>
+        <Field Name="contactfax">
+          <DataField>contactfax</DataField>
+        </Field>
+        <Field Name="AssignedUserID_PurchaseHeader">
+          <DataField>AssignedUserID_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="RequestedReceiptDate_PurchaseHeader">
+          <DataField>RequestedReceiptDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="YourReference_PurchaseHeader">
+          <DataField>YourReference_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="username">
+          <DataField>username</DataField>
+        </Field>
+        <Field Name="username1">
+          <DataField>username1</DataField>
+        </Field>
+        <Field Name="NAME1">
+          <DataField>NAME1</DataField>
+        </Field>
+        <Field Name="Header">
+          <DataField>Header</DataField>
+        </Field>
+        <Field Name="Type1">
+          <DataField>Type1</DataField>
+        </Field>
+        <Field Name="WorkDescription_PurchaseHeader">
+          <DataField>WorkDescription_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="Category_PurchaseHeader">
+          <DataField>Category_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="des">
+          <DataField>des</DataField>
+        </Field>
+        <Field Name="bool1">
+          <DataField>bool1</DataField>
+        </Field>
+        <Field Name="Details_PurchaseHeader">
+          <DataField>Details_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="AmountInWordsPO2">
+          <DataField>AmountInWordsPO2</DataField>
+        </Field>
+        <Field Name="PurchaserName">
+          <DataField>PurchaserName</DataField>
+        </Field>
+        <Field Name="PurchaserPhone">
+          <DataField>PurchaserPhone</DataField>
+        </Field>
+        <Field Name="DocumentType_PurchCommentLine">
+          <DataField>DocumentType_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="No_PurchCommentLine">
+          <DataField>No_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="LineNo_PurchCommentLine">
+          <DataField>LineNo_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="Date_PurchCommentLine">
+          <DataField>Date_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="Code_PurchCommentLine">
+          <DataField>Code_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="Comment_PurchCommentLine">
+          <DataField>Comment_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="DocumentLineNo_PurchCommentLine">
+          <DataField>DocumentLineNo_PurchCommentLine</DataField>
+        </Field>
+        <Field Name="No_PurchaseLine">
+          <DataField>No_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Description_PurchaseLine">
+          <DataField>Description_PurchaseLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchaseLine">
+          <DataField>UnitofMeasure_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLine">
+          <DataField>Quantity_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLineFormat">
+          <DataField>Quantity_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchaseLine">
+          <DataField>DirectUnitCost_PurchaseLine</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchaseLineFormat">
+          <DataField>DirectUnitCost_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="Amount_PurchaseLine">
+          <DataField>Amount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Amount_PurchaseLineFormat">
+          <DataField>Amount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="LineAmount_PurchaseLine">
+          <DataField>LineAmount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineAmount_PurchaseLineFormat">
+          <DataField>LineAmount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="VAT_PurchaseLine">
+          <DataField>VAT_PurchaseLine</DataField>
+        </Field>
+        <Field Name="VAT_PurchaseLineFormat">
+          <DataField>VAT_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_PurchaseLine">
+          <DataField>LineDiscountAmount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_PurchaseLineFormat">
+          <DataField>LineDiscountAmount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="srno">
+          <DataField>srno</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseLine">
+          <DataField>AmountIncludingVAT_PurchaseLine</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseLineFormat">
+          <DataField>AmountIncludingVAT_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="VATAmount">
+          <DataField>VATAmount</DataField>
+        </Field>
+        <Field Name="VATAmountFormat">
+          <DataField>VATAmountFormat</DataField>
+        </Field>
+        <Field Name="UnitCost_PurchaseLine">
+          <DataField>UnitCost_PurchaseLine</DataField>
+        </Field>
+        <Field Name="UnitCost_PurchaseLineFormat">
+          <DataField>UnitCost_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="ExpectedReceiptDate_PurchaseLine">
+          <DataField>ExpectedReceiptDate_PurchaseLine</DataField>
+        </Field>
+        <Field Name="TotalVATAmt">
+          <DataField>TotalVATAmt</DataField>
+        </Field>
+        <Field Name="TotalVATAmtFormat">
+          <DataField>TotalVATAmtFormat</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCode_PurchaseLine">
+          <DataField>UnitofMeasureCode_PurchaseLine</DataField>
+        </Field>
+        <Field Name="BaseUOM">
+          <DataField>BaseUOM</DataField>
+        </Field>
+        <Field Name="amt">
+          <DataField>amt</DataField>
+        </Field>
+        <Field Name="amtFormat">
+          <DataField>amtFormat</DataField>
+        </Field>
+        <Field Name="DocumentNo_PurchaseLine">
+          <DataField>DocumentNo_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineNo_PurchaseLine">
+          <DataField>LineNo_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Type_PurchaseLine">
+          <DataField>Type_PurchaseLine</DataField>
+        </Field>
+        <Field Name="VATBaseAmount_PurchaseLine">
+          <DataField>VATBaseAmount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="VATBaseAmount_PurchaseLineFormat">
+          <DataField>VATBaseAmount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="Number">
+          <DataField>Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

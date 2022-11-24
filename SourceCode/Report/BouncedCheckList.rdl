@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="logo">
+          <DataField>logo</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="BuildName">
+          <DataField>BuildName</DataField>
+        </Field>
+        <Field Name="SrNo">
+          <DataField>SrNo</DataField>
+        </Field>
+        <Field Name="TodayDate">
+          <DataField>TodayDate</DataField>
+        </Field>
+        <Field Name="Days">
+          <DataField>Days</DataField>
+        </Field>
+        <Field Name="CustBankAccName">
+          <DataField>CustBankAccName</DataField>
+        </Field>
+        <Field Name="DocumentNo_PostDatedCheckLine">
+          <DataField>DocumentNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="AccountType_PostDatedCheckLine">
+          <DataField>AccountType_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="AccountNo_PostDatedCheckLine">
+          <DataField>AccountNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="CheckDate_PostDatedCheckLine">
+          <DataField>CheckDate_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="CheckNo_PostDatedCheckLine">
+          <DataField>CheckNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Description_PostDatedCheckLine">
+          <DataField>Description_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Amount_PostDatedCheckLine">
+          <DataField>Amount_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Amount_PostDatedCheckLineFormat">
+          <DataField>Amount_PostDatedCheckLineFormat</DataField>
+        </Field>
+        <Field Name="AmountLCY_PostDatedCheckLine">
+          <DataField>AmountLCY_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="AmountLCY_PostDatedCheckLineFormat">
+          <DataField>AmountLCY_PostDatedCheckLineFormat</DataField>
+        </Field>
+        <Field Name="BankAccount_PostDatedCheckLine">
+          <DataField>BankAccount_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Comment_PostDatedCheckLine">
+          <DataField>Comment_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="BankPaymentType_PostDatedCheckLine">
+          <DataField>BankPaymentType_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="ContractNo_PostDatedCheckLine">
+          <DataField>ContractNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="BuildingNo_PostDatedCheckLine">
+          <DataField>BuildingNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="UnitNo_PostDatedCheckLine">
+          <DataField>UnitNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Status_PostDatedCheckLine">
+          <DataField>Status_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="ReversalReasonCode_PostDatedCheckLine">
+          <DataField>ReversalReasonCode_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="SettlementType_PostDatedCheckLine">
+          <DataField>SettlementType_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="SettlementComments_PostDatedCheckLine">
+          <DataField>SettlementComments_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="ReversalReasonComments_PostDatedCheckLine">
+          <DataField>ReversalReasonComments_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="ServiceContractType_PostDatedCheckLine">
+          <DataField>ServiceContractType_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Charges_PostDatedCheckLine">
+          <DataField>Charges_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Charges_PostDatedCheckLineFormat">
+          <DataField>Charges_PostDatedCheckLineFormat</DataField>
+        </Field>
+        <Field Name="AmountPaid_PostDatedCheckLine">
+          <DataField>AmountPaid_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="AmountPaid_PostDatedCheckLineFormat">
+          <DataField>AmountPaid_PostDatedCheckLineFormat</DataField>
+        </Field>
+        <Field Name="UpdatedwithLegalDept_PostDatedCheckLine">
+          <DataField>UpdatedwithLegalDept_PostDatedCheckLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

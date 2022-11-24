@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ContractNo_ServiceContractHeader">
+          <DataField>ContractNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="ContractType_ServiceContractHeader">
+          <DataField>ContractType_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="Description_ServiceContractHeader">
+          <DataField>Description_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="Status_ServiceContractHeader">
+          <DataField>Status_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="CustomerNo_ServiceContractHeader">
+          <DataField>CustomerNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="Name_ServiceContractHeader">
+          <DataField>Name_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="Address_ServiceContractHeader">
+          <DataField>Address_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="Address2_ServiceContractHeader">
+          <DataField>Address2_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="PostCode_ServiceContractHeader">
+          <DataField>PostCode_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="City_ServiceContractHeader">
+          <DataField>City_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="ServiceItemNo_ServiceContractHeader">
+          <DataField>ServiceItemNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="StartingDate_ServiceContractHeader">
+          <DataField>StartingDate_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="ExpirationDate_ServiceContractHeader">
+          <DataField>ExpirationDate_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="BuildingNo_ServiceContractHeader">
+          <DataField>BuildingNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="UnitNo_ServiceContractHeader">
+          <DataField>UnitNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="ParkingNo_ServiceContractHeader">
+          <DataField>ParkingNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="logo">
+          <DataField>logo</DataField>
+        </Field>
+        <Field Name="VatRegiNo">
+          <DataField>VatRegiNo</DataField>
+        </Field>
+        <Field Name="Email1">
+          <DataField>Email1</DataField>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+        </Field>
+        <Field Name="Mobile">
+          <DataField>Mobile</DataField>
+        </Field>
+        <Field Name="AnnualAmount_ServiceContractHeader">
+          <DataField>AnnualAmount_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="AnnualAmount_ServiceContractHeaderFormat">
+          <DataField>AnnualAmount_ServiceContractHeaderFormat</DataField>
+        </Field>
+        <Field Name="SD">
+          <DataField>SD</DataField>
+        </Field>
+        <Field Name="SDFormat">
+          <DataField>SDFormat</DataField>
+        </Field>
+        <Field Name="Commi">
+          <DataField>Commi</DataField>
+        </Field>
+        <Field Name="CommiFormat">
+          <DataField>CommiFormat</DataField>
+        </Field>
+        <Field Name="Dewa">
+          <DataField>Dewa</DataField>
+        </Field>
+        <Field Name="DewaFormat">
+          <DataField>DewaFormat</DataField>
+        </Field>
+        <Field Name="Munici">
+          <DataField>Munici</DataField>
+        </Field>
+        <Field Name="MuniciFormat">
+          <DataField>MuniciFormat</DataField>
+        </Field>
+        <Field Name="Admin">
+          <DataField>Admin</DataField>
+        </Field>
+        <Field Name="AdminFormat">
+          <DataField>AdminFormat</DataField>
+        </Field>
+        <Field Name="Parking">
+          <DataField>Parking</DataField>
+        </Field>
+        <Field Name="ParkingFormat">
+          <DataField>ParkingFormat</DataField>
+        </Field>
+        <Field Name="CheckBox">
+          <DataField>CheckBox</DataField>
+        </Field>
+        <Field Name="PaymentTermsCode_ServiceContractHeader">
+          <DataField>PaymentTermsCode_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="MaritalStatus">
+          <DataField>MaritalStatus</DataField>
+        </Field>
+        <Field Name="MobileNo">
+          <DataField>MobileNo</DataField>
+        </Field>
+        <Field Name="Emergency">
+          <DataField>Emergency</DataField>
+        </Field>
+        <Field Name="EMINo">
+          <DataField>EMINo</DataField>
+        </Field>
+        <Field Name="DOA">
+          <DataField>DOA</DataField>
+        </Field>
+        <Field Name="User">
+          <DataField>User</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="PhoneNo_ServiceContractHeader">
+          <DataField>PhoneNo_ServiceContractHeader</DataField>
+        </Field>
+        <Field Name="EmployerNameAdd_RecCust">
+          <DataField>EmployerNameAdd_RecCust</DataField>
+        </Field>
+        <Field Name="EmployerContactEmail_RecCust">
+          <DataField>EmployerContactEmail_RecCust</DataField>
+        </Field>
+        <Field Name="Nationality_RecCust">
+          <DataField>Nationality_RecCust</DataField>
+        </Field>
+        <Field Name="CheckDate_PostDatedCheckLine">
+          <DataField>CheckDate_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="CheckNo_PostDatedCheckLine">
+          <DataField>CheckNo_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Amount_PostDatedCheckLine">
+          <DataField>Amount_PostDatedCheckLine</DataField>
+        </Field>
+        <Field Name="Amount_PostDatedCheckLineFormat">
+          <DataField>Amount_PostDatedCheckLineFormat</DataField>
+        </Field>
+        <Field Name="SrNo">
+          <DataField>SrNo</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
